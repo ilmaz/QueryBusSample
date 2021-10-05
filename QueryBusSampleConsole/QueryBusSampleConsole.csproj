@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Framework-1\**" />
+    <Compile Remove="Framework2\**" />
+    <EmbeddedResource Remove="Framework-1\**" />
+    <EmbeddedResource Remove="Framework2\**" />
+    <None Remove="Framework-1\**" />
+    <None Remove="Framework2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Framework\IQueryResult.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Framework.Autofac\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+  </ItemGroup>
+
+</Project>
