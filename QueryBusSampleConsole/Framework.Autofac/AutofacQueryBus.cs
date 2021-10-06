@@ -4,6 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Autofac;
 using QueryBusSampleConsole.Framework.Base;
+using QueryBusSampleConsole.Framework.CqrsValidation;
 using QueryBusSampleConsole.Framework.RequestHandler;
 
 namespace QueryBusSampleConsole.Framework.Autofac
