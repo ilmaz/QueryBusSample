@@ -3,9 +3,9 @@ using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 using Autofac;
+using QueryBusSampleConsole.Framework.Autofac.RequestHandler;
 using QueryBusSampleConsole.Framework.Base;
 using QueryBusSampleConsole.Framework.CqrsValidation;
-using QueryBusSampleConsole.Framework.RequestHandler;
 
 namespace QueryBusSampleConsole.Framework.Autofac
 {
@@ -26,9 +26,7 @@ namespace QueryBusSampleConsole.Framework.Autofac
             CancellationToken cancellationToken = default)
         {
             if (query == null)
-            {
                 throw new ArgumentNullException(nameof(query));
-            }
 
             CqrsValidationContext.ValidateQuery(query);
 

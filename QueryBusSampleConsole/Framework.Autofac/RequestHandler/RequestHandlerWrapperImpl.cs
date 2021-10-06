@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Autofac;
 using QueryBusSampleConsole.Framework.Base;
 
-namespace QueryBusSampleConsole.Framework.RequestHandler
+namespace QueryBusSampleConsole.Framework.Autofac.RequestHandler
 {
     public class RequestHandlerWrapperImpl<TRequest, TResponse> : RequestHandlerWrapper<TResponse>
         where TRequest : IQuery<TResponse>

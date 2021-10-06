@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Autofac;
 
-namespace QueryBusSampleConsole.Framework.RequestHandler
+namespace QueryBusSampleConsole.Framework.Autofac.RequestHandler
 {
     public abstract class RequestHandlerBase
     {
