@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using Autofac;
 using QueryBusSampleConsole.Framework.Base;
 using QueryBusSampleConsole.Framework.RequestHandler;
@@ -32,6 +28,8 @@ namespace QueryBusSampleConsole.Framework.Autofac
             {
                 throw new ArgumentNullException(nameof(query));
             }
+
+            CqrsValidationContext.ValidateQuery(query);
 
             var queryType = query.GetType();
 
